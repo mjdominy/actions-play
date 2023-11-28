@@ -11,6 +11,7 @@ jobs:
   # Trigger ad-hoc deploy only if "/deploy" comment is left on the pull request.
   # Wait for the build to complete first before triggering with a comment.
   ad-hoc:
+    runs-on: ubuntu-latest
     steps:
-      -name: Show value
-       run: echo ${{ github.head_ref }}
+      - name: Show value
+        run: echo ${{ github.head_ref }}
