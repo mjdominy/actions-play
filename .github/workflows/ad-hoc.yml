@@ -1,0 +1,16 @@
+name: ad-hoc
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+
+jobs:
+  # Trigger ad-hoc deploy only if "/deploy" comment is left on the pull request.
+  # Wait for the build to complete first before triggering with a comment.
+  ad-hoc:
+    steps:
+      -name: Show value
+       run: echo ${{ github.head_ref }}
