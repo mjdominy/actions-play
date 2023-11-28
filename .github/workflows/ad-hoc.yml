@@ -13,5 +13,8 @@ jobs:
   ad-hoc:
     runs-on: ubuntu-latest
     steps:
-      - name: Show value
+      - name: Show head_ref
         run: echo ${{ github.head_ref }}
+
+      - name: Show ref_name
+        run: echo ${{ github.ref_name }}
